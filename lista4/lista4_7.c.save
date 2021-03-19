@@ -1,0 +1,26 @@
+//Escreva uma função que receba como parâmetros de entrada APENAS três variáveis reais, e retorne a média do valor
+//destas três variáveis, o maior valor entre elas e a diferença entre a média e este maior valor. Obs.: Não é permitido
+//utilizar variáveis globais.
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <string.h>
+
+float analise(float x,float y,float z){
+    float media ,maior,sum,desvio_maior,number[3] ; 
+    int i ; 
+    number = {x,y,z}; 
+
+
+    for(i=0;i<3;i++){
+       sum = sum + number[i];
+       maior = number[0]; 
+       if(number[i]>maior){
+            maior = number[i];
+       }
+    }
+    
+    
+
+
+}

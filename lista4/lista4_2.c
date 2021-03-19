@@ -10,8 +10,10 @@
 #define n 3
 
 float media(float x,float y,float z , char modo){
+    float media ;
     if(modo == 'A'){
-        return (x+y+z)/n ;
+         media = (x+y+z)/n ;
+        return media ;
     }
     else if (modo=='P'){
         return (5*x+3*y+2*z)/10;
@@ -28,21 +30,22 @@ float media(float x,float y,float z , char modo){
 int main(){
 int i ;
 float prova[n] ;
-char modo[2];
+char modo;
 
 do{
 printf( "Qual o tipo de media: ");
 fflush(stdin);
-scanf("%c",&modo);
-printf("%c",modo);
-}while(modo!='P'||modo!='A');
+//scanf(" %c",&modo);
+modo=getchar();
+
+}while(modo!='P'&&modo!='A');
 
 for(i = 0;i<n;i++){
     printf(" prova %d/%d :",i+1,n);
     scanf("%f",&prova[i]);
 }
 
-printf("A media numero eh %d",media(prova[0],prova[1],prova[2],modo));
+printf("A media eh %.2f",media(prova[0],prova[1],prova[2],modo));
 
 
 

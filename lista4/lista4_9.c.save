@@ -1,0 +1,28 @@
+
+//Crie uma função recursiva que receba um número inteiro N e retorne o somatório dos números de 1 a N.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <string.h>
+
+int sum(int N){
+   if(N>0){
+    
+
+    return N ;
+   }
+   else{
+  
+   }
+
+    }
+
+
+int main(){
+
+   printf("%d",sum(3));
+
+return 0 ;
+}

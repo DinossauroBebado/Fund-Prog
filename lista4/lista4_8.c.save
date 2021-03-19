@@ -1,0 +1,43 @@
+//Escrever um programa que leia dois vetores (tipo int) de tamanhos igual a 5. Faça uma função que receba como
+//parâmetros os vetores lidos e gere um novo vetor que corresponda à concatenação dos vetores passados como
+//parâmetro
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <string.h>
+
+int concat(int A[5], int B[5],int *C[10]){
+    for(int i = 0;i<= 9;i++){
+        if(i<5){
+            C[i] = A[i];
+        }else{
+            C[i] = B[i-5];
+        }
+         printf("%d",C[i]);
+    }
+
+    return C ;
+}
+
+int main(){
+    int A[5],B[5];
+    printf("Vetor A : \n");
+    for(int i = 0; i<5;i++){
+        scanf("%d",&A[i]);
+    }
+     printf("Vetor B : \n");
+     for(int j = 0; j<5;j++){
+        scanf("%d",&B[j]);
+    }
+
+
+     printf("Vetor C : \n");
+    for(int z = 0;z<11;z++){
+        printf("%d\n",concat(A,B)[z]);
+
+    }
+
+
+
+}

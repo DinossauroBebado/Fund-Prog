@@ -1,0 +1,23 @@
+//Faça uma função chamada menu() em que as opções de escolha são
+//1. Cadastrar
+//2. Listar
+//3. Salvar
+//4. Sair
+//A função não receberá nada como parâmetro e deve retornar o valor escolhido.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <string.h>
+
+enum  opçoes{"Cadastrar" =1,"Listar","Salvar","Sair"};
+
+int menu(){
+int escolha = getchar(); 
+switch (escolha)
+
+
+
+
+}

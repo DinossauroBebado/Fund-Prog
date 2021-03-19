@@ -1,0 +1,30 @@
+//Faça uma função que calcule e retorne o número e = 2, 71828183, utilizando a série
+//A função deve receber como parâmetro o número de termos que será somados, N. Note que quanto maior esse
+//número, mais próxima do valor e estará a resposta.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <string.h>
+
+#define num 4
+
+float euler(int n){
+    int N;
+    float soma;
+    for(int i = 0 ; i<n ;i++){
+        for(int j =0 ; j<i; j++){
+            N = j*(j+1);
+        }
+     printf("%d",N);
+     soma = soma + 1/N ;
+    }
+return  soma ;
+}
+
+int main(){
+   euler(num);
+return 0;
+}
+
+
