@@ -10,12 +10,12 @@
 //---------------------------------------------------------------nao funciona
 
 
-int concat(int A[5], int B[5],int *C[10]){
+int concat(int A[5], int B[5],int C[]){
     for(int i = 0;i<= 9;i++){
         if(i<5){
-            *C[i] = A[i];
+           C[i] = A[i];
         }else{
-            *C[i] = B[i-5];
+            C[i] = B[i-5];
         }
     }
 
@@ -33,11 +33,11 @@ int main(){
         scanf("%d",&B[j]);
     }
 
-     concat(A,B,&C);
+     concat(A,B,C);
 
      printf("Vetor C : \n");
-    for(int z = 0;z<11;z++){
-        printf("%d\n",C[z]);
+    for(int z = 0;z<10;z++){
+        printf("%d ",C[z]);
 
     }
 

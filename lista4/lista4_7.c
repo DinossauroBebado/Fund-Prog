@@ -7,7 +7,6 @@
 #include <conio.h>
 #include <string.h>
 
-//---------------------------------------------------------------nao funciona
 
 float analise(float x,float y,float z){
     float media ,maior,sum,desvio_maior;

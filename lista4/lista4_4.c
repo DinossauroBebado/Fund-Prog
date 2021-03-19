@@ -17,9 +17,10 @@ int menu(void){
 
 enum opcoes opt;
 int escolha;
+do{
 printf("1. Cadastrar\n2. Listar\n3. Salvar\n4. Sair\n");
 
-scanf("%d",&escolha);
+scanf("%d",&escolha);}while(escolha<1&&escolha>4);
 
 switch (escolha){
     case Cadastrar:

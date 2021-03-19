@@ -46,14 +46,17 @@ for(i = 0;i<N;i++){
       }
     al[i].media = sum/p;
     sum = 0 ;
-    if (al[i].media>6)
-        al[i].aprovado = 1;
-    if (al[i].prova[0]>al[maior_nota].prova[0])
-         maior_nota = i;
-    if (al[i].media>al[maior_media].media)
-        maior_media = i;
-    if (al[i].media<al[menor_media].media)
-        menor_media = i;
+
+    if (al[i].media>6){
+        al[i].aprovado = 1;}
+
+    if (al[i].prova[0]>al[maior_nota].prova[0]){
+         maior_nota = i;}
+
+    if (al[i].media>al[maior_media].media){
+        maior_media = i;}
+    if (al[i].media<al[menor_media].media){
+        menor_media = i;}
 }
 //imprime
 printf("---------------------------------------\n");
