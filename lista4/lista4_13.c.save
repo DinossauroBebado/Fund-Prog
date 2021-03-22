@@ -9,50 +9,57 @@
 
 #define max 500
 
+
+struct divisores {
+ int divisores[500];
+ int n ;
+};
+
 int acha_divisores(int N,int divisores[]){
-    int n ;
-    n = 0;
-    for(int i = 1;i<=(N/2);i++){
-        if(N%i==0){
-            divisores[n] = i;
-            n++;
+    int i;
+    int n = 0 ;
+
+    for(i = 1; i<=(N/2); i ++) {
+        if ( N%i==0){
+            divisores[n] = i ;
+            n++ ;
         }
     }
+    return n ;
+}
+int soma(int N,int n ,int divisores[]){
+    int j;
+    int soma = 0 ;
+    for(j =0;j<n;j++){
+        soma = soma + divisores[j];
+    }
+    if ( soma==N){
+        return 1 ;
+    }else{ return 0;}
+
 }
 
-int soma_divisores(int N,int divisores[]){
-    int soma = 0;
-    
-    for(int i = 0;i<;i++){
-        soma = soma + divisores[i];
-    }
-    if(soma==N){
-        return 1;
-    }else{
-        return 0;
-        }
-}
 
 int main(){
-  int x,divisores[100],respostas[100];
-  x = 0;
-  for(int j = 1; j<max;j++){
-    acha_divisores(j,divisores);
-    if( soma_divisores(j,divisores)){
-        respostas[x] = j;
+  int divisores[100];
+  int resposta[100];
+  int N = 0 ;
+  int x = 0 ;
+  int u,n;
+  struct divisores div[max];
+  for(u= 1;u<max;u++){
+      div[u].n = acha_divisores(N,div[u].divisores);
+      if(soma(N,acha_divisores(N,div[u].divisores),div[u].divisores)){
+        resposta[x] = u;
         x++;
-    }else{
-    continue ;
-    }
-    divisores[j] = 0;
+      }
   }
-
- for(int i = 0;i<x;i++){
-   printf("%d\n",respostas[i]);
- }
-
-
- return 0 ;
+  for(int j = 0 ; j<x ; j++){
+  printf("%d\n",resposta[x]);
+  }
+return 0 ;
 }
+
+
 
 
