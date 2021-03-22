@@ -10,24 +10,39 @@
 #include <conio.h>
 #include <string.h>
 
+#define comeco 1000
+#define final 9999
 
 int soma(int n){
-int n1, n2;
+    int n1, n2;
 
-n1 = n/100 ;
-n2 = n-(n1*100) ;
-
-printf("%d\n",n2);
-printf("%d",n1);
-
-return n1+n2 ;
+    n1 = n/100 ;
+    n2 = n-(n1*100) ;
+    printf("%d : %d | %d\n",n,n1,n2);
+    return n1+n2 ;
 }
 
-//int pot()
+int pot(N){
+    int n ;
+    n = soma(N);
+    return n*n ;
+}
 
 
 int main(){
+    int resposta[100];
+    int n,j,i = 0;
+    for(j = comeco; j<final ; j++ ){
+        if(pot(j)== j){
+            resposta[n] = j ;
+            n++ ;
+        }
+    }
+    printf("------------------- RESPOSTA -------------------------------------\n");
+    for(i = 0;i<n;i++){
+        printf("%d\n",resposta[i]);
+    }
+
+    }
 
 
-soma(3025);
-}
