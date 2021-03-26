@@ -7,13 +7,17 @@
 #include <conio.h>
 #include <string.h>
 
-
-float analise(float x,float y,float z){
+void analise(float *x,float *y,float *z){
     float media ,maior,sum,desvio_maior;
+    float xx, yy,zz ;
     int i ;
-    float number[3] = {x,y,z};
 
 
+    xx = *x;
+    yy = *y;
+    zz = *z;
+
+   float number[3] = {xx,yy,zz};
 
     for(i=0;i<3;i++){
        sum = sum + number[i];
@@ -26,9 +30,12 @@ float analise(float x,float y,float z){
     media = sum/3;
     desvio_maior = maior - media ;
 
-    float resultado[3] = {media , maior , desvio_maior};
+    *x = media ;
+    *y = desvio_maior;
+    *z = maior;
 
-    return resultado;
+
+
 }
 int main(){
 
@@ -40,7 +47,9 @@ scanf("%f",&y);
 printf("3 numero :");
 scanf("%f",&z);
 
-printf("%f, %f, %f", analise(x,y,z)[0],analise(x,y,z)[1],analise(x,y,z)[2]);
+analise(&x,&y,&z);
+
+printf("%f, %f, %f",x,y,z);
 
 
 return 0 ;
