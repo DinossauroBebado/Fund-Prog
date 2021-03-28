@@ -6,21 +6,22 @@
 #include <conio.h>
 #include <string.h>
 #include <math.h>
-
-int digitos(float N){
-    int i;
-    for(i = 0;i<10;i++){
+int digito(float N){
+    int i = 0;
+    while(N/pow(10,i)>1.0){
         printf("%f\n",N/pow(10,i));
-        if((N/pow(10,i))<0.0){
-            return i;
-        }
+        i++;
     }
-}
+       return i;
+    }
 
 
-int main(){
+
+int main( ){
 int d ;
-    d = digitos(3000);
-    printf("o numero de digitos eh %d",d);
+printf("Qual o numero ? \n");
+scanf("%d",&d);
+
+printf("O numero %d tem %d algorismos\n",d,digito(d));
 
 }

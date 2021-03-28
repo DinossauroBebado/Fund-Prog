@@ -1,7 +1,7 @@
-//Desenvolver uma estrutura modular com uma função que determina e retorna a potência de um número. A função
-//deverá receber através de parâmetro a base e o expoente da potência, com um número positivo, e sem utilizar funções
-//prontas do C deverá realizar o cálculo através de um processo de repetição. Por exemplo, para os valores 2 para a
-//base e 5 para o expoente a função deverá retornar 32 fazendo, 25
+//Desenvolver uma estrutura modular com uma funï¿½ï¿½o que determina e retorna a potï¿½ncia de um nï¿½mero. A funï¿½ï¿½o
+//deverï¿½ receber atravï¿½s de parï¿½metro a base e o expoente da potï¿½ncia, com um nï¿½mero positivo, e sem utilizar funï¿½ï¿½es
+//prontas do C deverï¿½ realizar o cï¿½lculo atravï¿½s de um processo de repetiï¿½ï¿½o. Por exemplo, para os valores 2 para a
+//base e 5 para o expoente a funï¿½ï¿½o deverï¿½ retornar 32 fazendo, 25
 //= 2 X 2 X 2 X 2 X 2 = 32.
 
 #include <stdio.h>
@@ -9,27 +9,27 @@
 #include <conio.h>
 #include <string.h>
 
-int pot(int base, int expoente){
-    int i, r ;
-    if(expoente==0)
+int pot(int base, int expoente)
+{
+    int i, r;
+    if (expoente == 0)
         return 1;
     r = 1;
-    for(i=1;i<=expoente;i++){
-        r = r*base;
+    for (i = 1; i <= expoente; i++)
+    {
+        r = r * base;
     }
 
-    return r ;
-
+    return r;
 }
 
-int main(){
-int base,expo ;
-printf("Base :");
-scanf("%d",&base);
-printf("Expoente:");
-scanf("%d",&expo);
+int main()
+{
+    int base, expo;
+    printf("Base :");
+    scanf("%d", &base);
+    printf("Expoente:");
+    scanf("%d", &expo);
 
-printf("%d",pot(base,expo));
-
-
+    printf("%d", pot(base, expo));
 }

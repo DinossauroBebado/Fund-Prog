@@ -1,4 +1,4 @@
-//1. Uma função receba como parâmetro dois números e retorne o maior deles.
+//1. Uma funï¿½ï¿½o receba como parï¿½metro dois nï¿½meros e retorne o maior deles.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,35 +7,32 @@
 
 #define n 2
 
-int max(int x, int y){
+int max(int x, int y)
+{
     //compara os dois inteiros buscando o maior
     //entrada dois numeros inteiros
     //saida :o maior inteiro
-    if(x > y){
-        return x ;
+    if (x > y)
+    {
+        return x;
     }
-    else{
+    else
+    {
         return y;
     }
 }
 
+int main()
+{
+    int i, numeros[n];
 
+    printf("Numeros para comparar : \n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d/%d :", i + 1, n);
+        scanf("%d", &numeros[i]);
+    }
+    printf("o maior numero eh %d", max(numeros[0], numeros[1]));
 
-
-int main(){
-int i,numeros[n] ;
-
-printf( "Numeros para comparar : \n");
-for(i = 0;i<n;i++){
-    printf("%d/%d :",i+1,n);
-    scanf("%d",&numeros[i]);
-}
-printf("o maior numero eh %d",max(numeros[0],numeros[1]));
-
-
-
-
-
-
-return 0 ;
+    return 0;
 }

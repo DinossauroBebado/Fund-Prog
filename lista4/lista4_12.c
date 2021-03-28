@@ -1,6 +1,6 @@
-//Desenvolver uma estrutura modular com duas funções que recebem através de parâmetro um caractere e retornam na
-//primeira função, o correspondente caractere alfabético maiúsculo e na segunda função o correspondente caractere
-//alfabético minúsculo.
+//Desenvolver uma estrutura modular com duas funï¿½ï¿½es que recebem atravï¿½s de parï¿½metro um caractere e retornam na
+//primeira funï¿½ï¿½o, o correspondente caractere alfabï¿½tico maiï¿½sculo e na segunda funï¿½ï¿½o o correspondente caractere
+//alfabï¿½tico minï¿½sculo.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,33 +9,38 @@
 
 //-------------------estrutura modular??????
 
-char maiusculo(char c){
+char maiusculo(char c)
+{
     char C;
-    if(c>='A'&&c<='Z'){
-        C = c ;
+    if (c >= 'A' && c <= 'Z')
+    {
+        C = c;
     }
-    else{
+    else
+    {
         C = c - 32;
     }
-    return C ;
+    return C;
 }
 
-char minusculo(char c){
+char minusculo(char c)
+{
     char C;
-    if(c>='a'&& c<='z'){
-        C = c ;
+    if (c >= 'a' && c <= 'z')
+    {
+        C = c;
     }
-    else{
+    else
+    {
         C = c + 32;
     }
-    return C ;
+    return C;
 }
 
-int main(){
-    char C ;
+int main()
+{
+    char C;
     printf("Digite um caracter");
-    scanf("%c",&C);
-    printf("Caracter : %c | Maiusculo : %c |Minusculo : %c\n",C,maiusculo(C),minusculo(C));
-
-
+    scanf("%c", &C);
+    printf("Caracter : %c | Maiusculo : %c |Minusculo : %c\n", C, maiusculo(C), minusculo(C));
 }
