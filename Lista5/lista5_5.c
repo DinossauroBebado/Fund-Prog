@@ -5,12 +5,18 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <string.h>
-
+#define n 5
 int main(){
-int A[5]= {1,2,3,4,5};
+int i,*p ,A[n];
+p = &A[0];
 
+for(i=0;i<n;i++){
+    scanf("%d",p+i);
+}
 
+for(i=0;i<n;i++){
+    printf("%d\n",(*p+i)*2);
 
-
+}
 
 }

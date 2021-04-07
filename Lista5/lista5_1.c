@@ -5,11 +5,8 @@
 #include <conio.h>
 #include <string.h>
 int main(){
-int X = 42;
-int Y = 32;
+int X,Y;
 
-printf("X = %d | %d \nY = %d | %d\n",X,&X,Y,&Y);
-printf("-----------------------------------\n");
 
 if(&X>&Y){
     printf("Maior endereco : %d",&X);
