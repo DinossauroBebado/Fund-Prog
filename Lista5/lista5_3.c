@@ -1,10 +1,7 @@
 //Crie um programa que contenha um array de float contendo 10 elementos. Imprima o endereço de
 //cada posição desse array.
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
-#include <string.h>
+
 #define n 10
 
 int main(){
