@@ -3,17 +3,17 @@
 
  void imprimeTamString(int numStrings, char **strings){
   int i,j,cont = 0;
-//printf("%c \n",*((*(strings+1))+2) );
-//   because you need to first de-reference to one of the actual string pointers and then you to
-//   de-reference that selected string pointer down to the desired character.
-//  (Note that I added extra parenthesis for clarity in the order of operations there).
+//   printf("%c \n",*((*(strings+1))+2) ) = strings[1][2];
 
+  // passa pelas palavras
   for (i = 0; i <numStrings; i++){
+    //passa pelas letras
      for (j = 0; j <sizeof(strings); j++){
+      //procura pelo fim da palavra
       if(*((*(strings+i))+j)=='\0'){
         printf("%s : %d \n",*(strings+i), cont);
         cont = 0;
-        break;
+        break;//vai para a proxima palavra
       }
        cont++;
       }
@@ -28,7 +28,7 @@
  int main(){
 
  char *strings[4] = {"maca","abacaxi","banana","pera" };
- int numStrings =4;
+ int  numStrings =4;
  imprimeTamString(numStrings,strings);
 
  }

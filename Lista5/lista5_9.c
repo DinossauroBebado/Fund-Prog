@@ -6,10 +6,10 @@
 
 #define n 5
 
-void print(int *v){
-    int i;
-    for(i=0;i<n;i++){
-        printf("%d : %d : %p\n",*(v+i),v+i,v+i);
+void print(int v[n]){
+    int *i;
+    for(i=v;i<v + n;i++){
+        printf("%d : %d : %p\n",*i,i,i);
     }
 }
 
