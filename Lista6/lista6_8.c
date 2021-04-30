@@ -14,15 +14,20 @@ typedef struct {
     float nota ;
 } notas ;
 
-float media(struct notas *not, int n ){
+float media(notas *not, int n ){
  int i;
+ float sum= 0;
  for(i=0;i<n;i++){
-    printf("%.2f\n",not[i].nota)
+   sum = sum + not[i].nota;
  }
+ return sum/n ;
 }
 
 int main(){
-int n ;
+int n,i,maior,menor ;
+maior = 0;
+menor = 0;
+float med = 6.0 ;
 
 printf("Informe o numero de alunos: ");
 scanf("%d", &n);
@@ -30,17 +35,25 @@ scanf("%d", &n);
 notas *not = (notas*) malloc(n*sizeof(notas));
 
 for(i=0;i<n;i++){
-    printf("--------%d---------",i);
+    printf("--------%d---------\n",i);
     printf("Nome :");
+    fflush(stdin);
     gets(not[i].nome);
 
     printf("Nota : ");
     scanf("%f",&not[i].nota);
+
+    if(not[i].nota>=med){
+        maior ++ ;
+        }
 }
 
-media(%not,n);
-
-
-
+menor = n-maior;
+printf("------------------------\n");
+printf("    Maior nota : %.d\n    Menor nota : %.d\n    Media : %.2f\n",
+       maior,
+       menor,
+       media(not,n));
+printf("------------------------\n");
 
 }
