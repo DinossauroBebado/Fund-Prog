@@ -8,6 +8,27 @@
 #include <stdlib.h>
 #include <string.h>
 
+int mexeRemexe(int *v1, int *v2, int N){
+int *vet3,i,j;
+
+vet3 = (int*) malloc((2*N)*sizeof(int));
+int k = 0;
+int l = 0;
+
+for(i=0;i<2*N;i++){
+    if(i%2==0){
+        vet3[i]=v1[k];
+        k++;
+    }else{
+        vet3[i]=v2[l];
+        l++;
+    }
+
+}
+  return vet3 ;
+}
+
+
 
 int main(){
 
@@ -16,7 +37,7 @@ int main(){
  printf("Qual o tamanho dos vetores ?\n");
  scanf("%d",&N);
 
- int i, vet1[N],vet2[N],*vet3;
+ int i, vet1[N],vet2[N];
 
  for(i = 0 ; i<N ; i++){
         printf("vetor1[%d] : ",i);
@@ -32,20 +53,10 @@ for(i = 0 ; i<N ; i++){
         scanf("%d",&vet2[i]);
     }
 
-vet3 = (int *) malloc((2*N)*sizeof(int));
+int *vet3 = mexeRemexe(vet1,vet2,N);
 
-vet3[0] = vet1[0];
-vet3[1] = vet2[0];
-for(i = 2 ; i<(2*N) ; i++){
-        if(i%2==0){
-            vet3[i] = vet1[i/2];
-        }else{
-            vet3[i] = vet2[(i+1)/2];
-        }
-    }
-
-for(i = 0 ; i<2*N ; i++){
-        printf("%d\n",vet3[i]);
+for(i=0;i<2*N;i++){
+    printf("%d\n",vet3[i]);
 }
 
 return 0 ;

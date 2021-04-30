@@ -7,38 +7,38 @@
 #include <string.h>
 
 
-int *alocaMatrix(int N ){
-    int *p,i,j;
-
-    p = (int *) malloc(N*sizeof(int));
-
-    *p = N ;
-
-    int matrix[*p][*p];
-
-    for(i = 0;i<N;i++){
-            for(j = 0;j<N;j++){
-                if(i==j){
-                    matrix[i][j]= 1;
-                }else{
-                    matrix[i][j]= 0;
-                }
-            }
-
+int **alocaMatrix(int N) {
+  int **x, i, j;
+  x = (int **)malloc(N* sizeof(int));
+  for(i=0; i<N; i++) {
+    x[i] = (int *)malloc(N * sizeof(int));
+    for(j=0; j<N; j++) {
+      if(i==j){
+        x[i][j] = 1;
+      }else{
+        x[i][j] = 0;
+        }
     }
-
-
-return &matrix;
-
+  }
+  return(x);
 }
 
-int main(){
-int N,*i,j ;
 
+int main(){
+
+int N,i,j;
+
+printf("Qual o tamanho da matriz ?\n");
 scanf("%d",&N);
-int **matrix[N][N] ;
-//matrix[N][N] = alocaMatrix(N);
-for(i = alocaMatrix(N);i<(N*N);i++){
-       printf("%d",*i);
+
+int **matrix = alocaMatrix( N );
+
+for(i=0;i<N;i++){
+        for(j=0;j<N;j++){
+         printf("%d ",matrix[i][j]);
+
+        }
+        printf("\n");
+
 }
 }
