@@ -15,17 +15,21 @@ printf("Qual o tamanho do vetor ? \n");
 scanf("%d",& tamanhoVetor);
 
 p = (int *) malloc(sizeof(int));
-*p = tamanhoVetor;
 
-int vetor[*p];
+if(p==NULL){
+    printf("Erro de memoria");
+    exit(1);
+}
+
+*p = tamanhoVetor;
 
 for(i = 0;i<tamanhoVetor;i++){
     printf("%d :",i +1);
-    scanf("%d",&vetor[i]);
+    scanf("%d",&p[i]);
 }
 printf("------------------------------\n");
 for(i = 0;i<tamanhoVetor;i++){
-    printf("%d\n",vetor[i]);
+    printf("%d\n",p[i]);
 }
 
 free(p);

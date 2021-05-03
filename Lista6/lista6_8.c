@@ -33,6 +33,10 @@ printf("Informe o numero de alunos: ");
 scanf("%d", &n);
 
 notas * not = (notas *) malloc(n*sizeof(notas));
+if(not==NULL){
+    printf("Erro de memoria");
+    exit(1);
+}
 
 
 
@@ -56,6 +60,6 @@ printf("    Acima : %.f\n    Abaixo: %.f\n    Media : %.2f\n",
        menor,
        media(not,n));
 printf("------------------------\n");
-
+free(not);
  return 0;
 }

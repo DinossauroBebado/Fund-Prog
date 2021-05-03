@@ -23,6 +23,10 @@ int main(){
 
 
   info *inf = (info *)malloc(n*sizeof(info));
+  if(inf==NULL){
+    printf("Erro de memoria");
+    exit(1);
+}
 
   for(i=0;i<n;i++){
 
@@ -52,5 +56,6 @@ int main(){
    }
 
    printf("-------------------------------------------\n");
+   free(inf);
 return 0;
 }

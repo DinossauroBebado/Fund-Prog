@@ -15,6 +15,11 @@ int main(){
 
     vet = (int *) malloc(N*sizeof(int));
 
+    if(vet==NULL){
+    printf("Erro de memoria");
+    exit(1);
+}
+
     for(i = 0 ; i<N ; i++){
         printf("%d : ",i);
         scanf("%d",&vet[i]);
@@ -34,7 +39,7 @@ int sum = 0;
     }
     float media = sum/N;
 printf("  Maior valor : %d \n  Menor valor : %d \n  Media : %.2f",maior,menor,media);
-
+ free(vet);
  return 0 ;
 }
 

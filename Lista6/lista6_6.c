@@ -12,6 +12,10 @@ int mexeRemexe(int *v1, int *v2, int N){
 int *vet3,i,j;
 
 vet3 = (int*) malloc((2*N)*sizeof(int));
+if(vet3==NULL){
+    printf("Erro de memoria");
+    exit(1);
+}
 int k = 0;
 int l = 0;
 
@@ -58,6 +62,6 @@ int *vet3 = mexeRemexe(vet1,vet2,N);
 for(i=0;i<2*N;i++){
     printf("%d\n",vet3[i]);
 }
-
+free(vet3);
 return 0 ;
 }
