@@ -25,7 +25,6 @@ int main() {
 
   c = fgetc(arq);
   while (c != EOF) {
-    //printf("%c", c);
 
     ctCaractere++;
 
