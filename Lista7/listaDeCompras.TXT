@@ -1,0 +1,3 @@
+dragao 3 102
+fada 1 34,5
+mongeSovietico 23 19,84
