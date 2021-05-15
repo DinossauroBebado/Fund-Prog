@@ -16,7 +16,7 @@
 #include <locale.h>
 #include <string.h>
 
-#define AMIGOS 5
+#define AMIGOS 1
 
 typedef struct pessoa{
     char nome[50];
