@@ -1,0 +1,10 @@
+3
+Osciloscopio
+MINIPA 12
+TEKTRONICS 21
+VOM
+FLUKE 25
+KEYSIGHT 35
+Fontes
+HP 12
+Agilent 5

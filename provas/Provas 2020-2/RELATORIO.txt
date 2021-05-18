@@ -1,0 +1,20 @@
+Itens do almoxarifado:
+
+
+0 Osciloscopio:
+ a. MINIPA 12
+ b. TEKTRONICS 21
+TOTAL: 33
+---------------------------------------
+
+1 VOM:
+ a. FLUKE 25
+ b. KEYSIGHT 35
+TOTAL: 60
+---------------------------------------
+
+2 Fontes:
+ a. HP 12
+ b. Agilent 5
+TOTAL: 17
+---------------------------------------
