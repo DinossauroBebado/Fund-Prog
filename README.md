@@ -7,3 +7,5 @@ Qualquer problema criar um issue aqui no GitHub ou entrar em contato em qualquer
 Para comentar um bloco de codigo, seleciona o bloco e <b> Ctrl+Shift + C </b>
 Analogamente para descomentar <b>Ctrl + Shift + X </b> 
 Atalho para rodar o codigo <b> F9 </b> 
+
+#####PS: Não posso compartilhar os PDFs da listas ou provas pois os mesmo estão sobre a propriedade intelectual da faculdade, se quiser acesso a esses materias manda DM
